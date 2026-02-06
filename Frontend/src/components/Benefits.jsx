@@ -32,10 +32,10 @@ const Benefits = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group"
+                whileHover={{ scale: 1.05, y: -10 }}
+                className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-blue-500/30 dark:hover:border-blue-500/30 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-900/20 transition-all group cursor-default"
               >
-                <div className={`size-12 rounded-lg ${item.bgClass} dark:bg-slate-800 flex items-center justify-center ${item.colorClass} mb-4 group-hover:scale-110 transition-transform`}>
+                <div className={`size-12 rounded-lg ${item.bgClass} dark:bg-slate-800 flex items-center justify-center ${item.colorClass} mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300`}>
                   <span className="material-symbols-outlined">{item.icon}</span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>

@@ -23,8 +23,8 @@ const Flowchart = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              whileHover={{ scale: 1.05, rotateY: 5 }}
-              className="bg-flow-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-colors"
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-flow-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 shadow-lg hover:shadow-primary/20 transition-all cursor-default"
             >
               <h3 className="text-xl font-bold mb-8 text-center text-white/90">Screening Flow</h3>
               <div className="flex flex-col items-center gap-1">
@@ -46,8 +46,8 @@ const Flowchart = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              whileHover={{ scale: 1.05, rotateY: 5 }}
-              className="bg-flow-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-colors"
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-flow-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 shadow-lg hover:shadow-primary/20 transition-all cursor-default"
             >
               <h3 className="text-xl font-bold mb-8 text-center text-white/90">Interview Loop</h3>
               <div className="flex flex-col items-center gap-1">
@@ -72,8 +72,8 @@ const Flowchart = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              whileHover={{ scale: 1.05, rotateY: -5 }}
-              className="bg-flow-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-colors"
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-flow-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 shadow-lg hover:shadow-primary/20 transition-all cursor-default"
             >
               <h3 className="text-xl font-bold mb-8 text-center text-white/90">Re-engagement</h3>
               <div className="flex flex-col items-center gap-1">

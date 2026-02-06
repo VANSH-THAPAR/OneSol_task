@@ -45,8 +45,8 @@ const Testimonials = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                whileHover={{ y: -10 }}
-                className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 h-full flex flex-col transition-all duration-300 hover:shadow-xl dark:hover:shadow-slate-800/50"
+                whileHover={{ scale: 1.03, y: -10 }}
+                className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 h-full flex flex-col transition-all duration-300 hover:bg-white dark:hover:bg-slate-800 hover:border-blue-200 dark:hover:border-blue-900 hover:shadow-2xl hover:shadow-blue-500/10 cursor-default"
               >
                 <div className="flex gap-1 mb-6 text-yellow-400">
                   <span className="material-symbols-outlined text-lg">star</span><span className="material-symbols-outlined text-lg">star</span><span className="material-symbols-outlined text-lg">star</span><span className="material-symbols-outlined text-lg">star</span><span className="material-symbols-outlined text-lg">star</span>

@@ -8,7 +8,7 @@ const Hero = () => {
           <div className="absolute top-[10%] left-[2%] bg-surface-light p-5 rounded-2xl shadow-xl border border-slate-100 max-w-sm animate-float z-20">
             <div className="flex items-start gap-4">
               <div className="size-12 min-w-12 rounded-full bg-slate-200 overflow-hidden">
-                <img alt="Sarah K." className="w-full h-full object-cover" src="https://ui-avatars.com/api/?name=Sarah+K&background=random" />
+                <img alt="Sarah K." className="w-full h-full object-cover" src="https://randomuser.me/api/portraits/women/12.jpg" />
               </div>
               <div>
                 <p className="text-sm font-medium text-slate-900 italic mb-2">"Candidates wait 3 weeks for replies while I'm juggling everything. We're losing great talent to competitors."</p>
@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="absolute top-[15%] right-[2%] bg-surface-light p-5 rounded-2xl shadow-xl border border-slate-100 max-w-sm animate-float z-20" style={{ animationDelay: '1.5s' }}>
             <div className="flex items-start gap-4">
               <div className="size-12 min-w-12 rounded-full bg-slate-200 overflow-hidden">
-                <img alt="Rahul M." className="w-full h-full object-cover" src="https://ui-avatars.com/api/?name=Rahul+M&background=random" />
+                <img alt="Rahul M." className="w-full h-full object-cover" src="https://randomuser.me/api/portraits/men/45.jpg" />
               </div>
               <div>
                 <p className="text-sm font-medium text-slate-900 italic mb-2">"Posted on LinkedIn. Got 200 applications. Skimmed through 20. Hired on gut feeling. They quit in 2 months."</p>
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="absolute bottom-[5%] left-[5%] bg-surface-light p-5 rounded-2xl shadow-xl border border-slate-100 max-w-sm animate-float z-20" style={{ animationDelay: '3s' }}>
             <div className="flex items-start gap-4">
               <div className="size-12 min-w-12 rounded-full bg-slate-200 overflow-hidden">
-                <img alt="Priya S." className="w-full h-full object-cover" src="https://ui-avatars.com/api/?name=Priya+S&background=random" />
+                <img alt="Priya S." className="w-full h-full object-cover" src="https://randomuser.me/api/portraits/women/65.jpg" />
               </div>
               <div>
                 <p className="text-sm font-medium text-slate-900 italic mb-2">"I'm the CEO, product lead, AND now doing HR? There's zero time to read 200 resumes properly."</p>
@@ -56,7 +56,7 @@ const Hero = () => {
           <div className="absolute bottom-[10%] right-[5%] bg-surface-light p-5 rounded-2xl shadow-xl border border-slate-100 max-w-sm animate-float z-20" style={{ animationDelay: '4.5s' }}>
             <div className="flex items-start gap-4">
               <div className="size-12 min-w-12 rounded-full bg-slate-200 overflow-hidden">
-                <img alt="Amit T." className="w-full h-full object-cover" src="https://ui-avatars.com/api/?name=Amit+T&background=random" />
+                <img alt="Amit T." className="w-full h-full object-cover" src="https://randomuser.me/api/portraits/men/22.jpg" />
               </div>
               <div>
                 <p className="text-sm font-medium text-slate-900 italic mb-2">"Our best candidate accepted another offer while we were still scheduling interviews. This keeps happening."</p>

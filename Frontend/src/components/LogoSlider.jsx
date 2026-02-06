@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const LogoSlider = () => {
   const scrollRef = useRef(null);
@@ -72,7 +73,13 @@ const LogoSlider = () => {
   ];
 
   return (
-      <section className="py-16 bg-integration-bg border-y border-slate-200 dark:border-slate-800 logo-slider transition-colors duration-300">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="py-16 bg-integration-bg border-y border-slate-200 dark:border-slate-800 logo-slider transition-colors duration-300"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
           <p className="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Available on top hiring platforms</p>
         </div>
@@ -114,7 +121,7 @@ const LogoSlider = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
   );
 };
 

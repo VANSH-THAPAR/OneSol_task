@@ -1,62 +1,47 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const benefitsData = [
+  { icon: 'bolt', title: 'Fast Processing', description: 'Process thousands of resumes in seconds. Our AI engine never sleeps, ensuring no candidate is left waiting.', colorClass: 'text-primary', bgClass: 'bg-blue-50' },
+  { icon: 'speed', title: 'Quick Time-to-Hire', description: 'Cut down hiring cycles from months to days. Identify top talent instantly and schedule interviews automatically.', colorClass: 'text-purple-600 dark:text-purple-400', bgClass: 'bg-purple-50' },
+  { icon: 'database', title: 'Massive Capacity', description: 'Handle unlimited applicants without bottlenecks. Scale your hiring campaigns without scaling your HR team.', colorClass: 'text-indigo-600 dark:text-indigo-400', bgClass: 'bg-indigo-50' },
+  { icon: 'balance', title: 'Unbiased AI', description: 'Fair and objective scoring for every candidate. Remove unconscious bias and build a diverse workforce.', colorClass: 'text-green-600 dark:text-green-400', bgClass: 'bg-green-50' },
+  { icon: 'link', title: 'Seamless Integration', description: 'Connects with your existing ATS (Greenhouse, Lever, Workday) and communication tools like Slack and Zoom.', colorClass: 'text-orange-600 dark:text-orange-400', bgClass: 'bg-orange-50' },
+  { icon: 'support_agent', title: '24/7 Support', description: 'Our dedicated support team and comprehensive knowledge base are available whenever you need help.', colorClass: 'text-pink-600 dark:text-pink-400', bgClass: 'bg-pink-50' },
+];
 
 const Benefits = () => {
     return (
       <section className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16 max-w-3xl mx-auto"
+          >
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Why Leading Companies Trust Us</h2>
             <p className="text-slate-500 dark:text-slate-400">From startups to enterprises, RecruiterAI scales with your hiring needs.</p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group">
-              <div className="size-12 rounded-lg bg-blue-50 dark:bg-slate-800 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">bolt</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Fast Processing</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Process thousands of resumes in seconds. Our AI engine never sleeps, ensuring no candidate is left waiting.</p>
-            </div>
-            {/* Card 2 */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group">
-              <div className="size-12 rounded-lg bg-purple-50 dark:bg-slate-800 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">speed</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Quick Time-to-Hire</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Cut down hiring cycles from months to days. Identify top talent instantly and schedule interviews automatically.</p>
-            </div>
-            {/* Card 3 */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group">
-              <div className="size-12 rounded-lg bg-indigo-50 dark:bg-slate-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-4 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">database</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Massive Capacity</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Handle unlimited applicants without bottlenecks. Scale your hiring campaigns without scaling your HR team.</p>
-            </div>
-            {/* Card 4 */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group">
-              <div className="size-12 rounded-lg bg-green-50 dark:bg-slate-800 flex items-center justify-center text-green-600 dark:text-green-400 mb-4 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">balance</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Unbiased AI</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Fair and objective scoring for every candidate. Remove unconscious bias and build a diverse workforce.</p>
-            </div>
-            {/* Card 5 */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group">
-              <div className="size-12 rounded-lg bg-orange-50 dark:bg-slate-800 flex items-center justify-center text-orange-600 dark:text-orange-400 mb-4 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">link</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Seamless Integration</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Connects with your existing ATS (Greenhouse, Lever, Workday) and communication tools like Slack and Zoom.</p>
-            </div>
-            {/* Card 6 */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group">
-              <div className="size-12 rounded-lg bg-pink-50 dark:bg-slate-800 flex items-center justify-center text-pink-600 dark:text-pink-400 mb-4 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">support_agent</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">24/7 Support</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Our dedicated support team and comprehensive knowledge base are available whenever you need help.</p>
-            </div>
+            {benefitsData.map((item, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all group"
+              >
+                <div className={`size-12 rounded-lg ${item.bgClass} dark:bg-slate-800 flex items-center justify-center ${item.colorClass} mb-4 group-hover:scale-110 transition-transform`}>
+                  <span className="material-symbols-outlined">{item.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

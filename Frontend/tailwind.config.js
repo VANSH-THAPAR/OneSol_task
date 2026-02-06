@@ -11,16 +11,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#3B82F6", 
-        "primary-dark": "#2563EB",
-        "hero-bg": "#EFF6FF",
-        "metric-bg": "#EFF6FF",
-        "integration-bg": "#F8FAFC",
+        "primary": "rgb(var(--color-primary) / <alpha-value>)", 
+        "primary-dark": "rgb(var(--color-primary-dark) / <alpha-value>)",
+        "hero-bg": "rgb(var(--color-hero-bg) / <alpha-value>)",
+        "metric-bg": "rgb(var(--color-metric-bg) / <alpha-value>)",
+        "integration-bg": "rgb(var(--color-integration-bg) / <alpha-value>)",
         "flow-bg": "#000000",
         "flow-card": "#404040",
         "footer-bg": "#000000",
         "footer-card": "#404040",
-        "surface-light": "#FFFFFF",
+        "surface-light": "rgb(var(--color-surface-light) / <alpha-value>)",
       },
       fontFamily: {
         "display": ["Inter", "sans-serif"],

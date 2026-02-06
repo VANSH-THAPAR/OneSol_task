@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: 59 130 246; /* #3B82F6 */
+    --color-primary-dark: 37 99 235; /* #2563EB */
+    --color-hero-bg: 239 246 255; /* #EFF6FF */
+    --color-metric-bg: 239 246 255; /* #EFF6FF */
+    --color-integration-bg: 248 250 252; /* #F8FAFC */
+    --color-surface-light: 255 255 255; /* #FFFFFF */
+  }
+
+  .dark {
+    --color-primary: 96 165 250; /* #60A5FA */
+    --color-primary-dark: 59 130 246; /* #3B82F6 */
+    --color-hero-bg: 15 23 42; /* #0F172A (slate-900) */
+    --color-metric-bg: 15 23 42; /* #0F172A */
+    --color-integration-bg: 2 6 23; /* #020617 (slate-950) */
+    --color-surface-light: 30 41 59; /* #1E293B (slate-800) */
+  }
+}
+
 body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  @apply text-slate-900 bg-white dark:bg-slate-950 dark:text-slate-100;
 }
 
 .material-symbols-outlined {

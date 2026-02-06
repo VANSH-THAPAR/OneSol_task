@@ -72,9 +72,9 @@ const LogoSlider = () => {
   ];
 
   return (
-      <section className="py-16 bg-integration-bg border-y border-slate-200 logo-slider">
+      <section className="py-16 bg-integration-bg border-y border-slate-200 dark:border-slate-800 logo-slider transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
-          <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Available on top hiring platforms</p>
+          <p className="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Available on top hiring platforms</p>
         </div>
         <div className="relative w-full">
           {/* Using integration-bg (slate-50/slate-100 approx) for gradients to match background */}
@@ -107,7 +107,7 @@ const LogoSlider = () => {
                         <span className="hidden material-symbols-outlined text-4xl text-slate-400">image_not_supported</span>
                     </div>
                     {/* Name always visible, larger size */}
-                    <span className="text-lg font-bold text-slate-500 group-hover:text-primary transition-colors duration-300 whitespace-nowrap">{company.name}</span>
+                    <span className="text-lg font-bold text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors duration-300 whitespace-nowrap">{company.name}</span>
                   </div>
                 ))}
               </div>

@@ -128,7 +128,7 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 1 }}
             className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-             Automate your recruitment pipeline today. Connect with top talent instantly using our intelligent automation engine.
+          Stop losing great candidates to slow, manual hiring processes. Let AI handle the heavy lifting while you focus on building your team.
           </motion.p>
           
           <motion.div 
@@ -140,14 +140,15 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition-all"
+              className="relative w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition-all overflow-hidden group"
             >
-              Start Free Trial
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+              <span className="relative z-10">Start Hiring Smarter</span>
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-purple-500/10 dark:hover:shadow-purple-900/10"
             >
               <span className="material-symbols-outlined text-slate-400">play_circle</span> Watch Demo
             </motion.button>

@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const navLinks = [
+    { name: 'Product', href: '#' },
+    { name: 'Solutions', href: '#' },
+    { name: 'Pricing', href: '#' },
+  ];
 
   useEffect(() => {
     // Check local storage or system preference
@@ -36,17 +44,43 @@ const Navbar = () => {
               </div>
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">RecruiterAI</span>
             </div>
-            <nav className="hidden md:flex items-center gap-8">
-              <a className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Product</a>
-              <a className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Solutions</a>
-              <a className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Pricing</a>
+            <nav className="hidden md:flex items-center gap-2" onMouseLeave={() => setHoveredIndex(null)}>
+              {navLinks.map((link, index) => (
+                <a 
+                  key={link.name}
+                  href={link.href}
+                  className="relative px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors hover:text-primary dark:hover:text-primary"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                >
+                  <AnimatePresence>
+                    {hoveredIndex === index && (
+                      <motion.span
+                        className="absolute inset-0 rounded-lg bg-blue-50 dark:bg-slate-800 -z-10"
+                        layoutId="nav-hover"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                  </AnimatePresence>
+                  <span className="relative z-10">{link.name}</span>
+                </a>
+              ))}
             </nav>
             <div className="flex items-center gap-4">
-              <button onClick={toggleTheme} className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-                  <span className="material-symbols-outlined text-xl">{isDark ? 'light_mode' : 'dark_mode'}</span>
+              <button onClick={toggleTheme} className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors relative overflow-hidden group">
+                  <span className="material-symbols-outlined text-xl relative z-10 transition-transform duration-500 group-hover:rotate-180">{isDark ? 'light_mode' : 'dark_mode'}</span>
               </button>
-              <a className="hidden md:block text-sm font-semibold text-slate-900 dark:text-white hover:text-primary" href="#">Log in</a>
-              <button className="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm">Start Free Trial</button>
+              <a className="hidden md:block text-sm font-semibold text-slate-900 dark:text-white hover:text-primary transition-colors" href="#">Log in</a>
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative overflow-hidden bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm group"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                <span className="relative z-10">Start Free Trial</span>
+              </motion.button>
             </div>
           </div>
         </div>

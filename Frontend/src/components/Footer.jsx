@@ -13,10 +13,11 @@ const Footer = () => {
                  Join 500+ companies hiring smarter with AI
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="px-8 py-4 bg-[#3B82F6] hover:bg-primary-dark text-white rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-900/50">
-                   Start Free Trial
+                <button className="relative overflow-hidden px-8 py-4 bg-[#3B82F6] hover:bg-primary-dark text-white rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-900/50 group">
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                  <span className="relative z-10">Start Free Trial</span>
                 </button>
-                <button className="px-8 py-4 bg-transparent border border-slate-500 hover:bg-white/10 text-white rounded-xl font-bold text-lg transition-all">
+                <button className="px-8 py-4 bg-transparent border border-slate-500 hover:bg-white/10 text-white rounded-xl font-bold text-lg transition-all hover:scale-105">
                    Schedule Demo
                 </button>
               </div>
@@ -26,7 +27,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-primary">smart_toy</span>
               <span className="font-bold text-slate-200">RecruiterAI</span>
-              <span className="text-slate-600">© 2024</span>
+              <span className="text-slate-600">© 2026</span>
             </div>
             <div className="flex gap-6">
               <a className="hover:text-primary transition-colors" href="#">Privacy Policy</a>

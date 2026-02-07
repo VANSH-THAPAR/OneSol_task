@@ -44,8 +44,9 @@ const Metrics = () => {
                   whileInView={{ height: item.height }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.8, type: "spring", bounce: 0.2 }}
-                  className={`w-full ${item.color} rounded-t-lg relative overflow-hidden shadow-lg ${item.shadow} group-hover:opacity-90 transition-all duration-300`}
+                  className={`w-full ${item.color} rounded-t-lg relative overflow-hidden shadow-lg ${item.shadow} group-hover:brightness-110 group-hover:scale-y-105 origin-bottom transition-all duration-300`}
                 >
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                   <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/10 to-transparent"></div>
                 </motion.div>
 

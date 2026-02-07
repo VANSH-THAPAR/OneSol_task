@@ -150,7 +150,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-purple-500/10 dark:hover:shadow-purple-900/10"
             >
-              <span className="material-symbols-outlined text-slate-400">play_circle</span> Watch Demo
+              <span className="material-symbols-outlined text-slate-400">play_circle</span> See How It Works
             </motion.button>
           </motion.div>
         </div>

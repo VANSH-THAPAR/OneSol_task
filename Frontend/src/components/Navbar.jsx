@@ -12,8 +12,8 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    // Check local storage or system preference
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // Check local storage, default to Light Mode (ignore system preference)
+    if (localStorage.theme === 'dark') {
       document.documentElement.classList.add('dark');
       setIsDark(true);
     } else {

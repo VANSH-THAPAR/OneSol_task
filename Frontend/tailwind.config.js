@@ -34,8 +34,12 @@ export default {
       animation: {
         'scroll': 'scroll 40s linear infinite',
         'float': 'float 6s ease-in-out infinite',
+        'shimmer': 'shimmer 1.5s infinite',
       },
       keyframes: {
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' },
+        },
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
